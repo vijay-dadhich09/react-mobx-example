@@ -1,10 +1,18 @@
-mobx-react-boilerplate
+mobx-react-example
 =====================
 
 A minimal application that combines [MobX](https://mobxjs.github.io/mobx) with [React](https://facebook.github.io/react).
 Supports ES6 and JSX compilation through babel.
 
-* For a more sophisticated project to start with, see the full TodoMVC implementation: [mobx-react-todomvc](https://github.com/mobxjs/mobx-react-todomvc).
+* This application provides facility to add, delete and get posts.
+
+Technology stack
+1.	React
+2.	Mobx
+3.	Webpack for bundling
+4.	axios for API requests
+5.	loadash for handling state objects 
+
 
 ### Run the example
 
@@ -14,7 +22,5 @@ npm start
 open http://localhost:3000
 ```
 
-
-### Credits
-
-* [Mendix](http://github.com/mendix) for providing the opportunity to battle test this approach (we're hiring!).
+@Author
+Vijay Dadhich <vijay.dadhich09@gmail.com>
