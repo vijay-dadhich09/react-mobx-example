@@ -12,6 +12,7 @@ Technology stack
 3.	Webpack for bundling
 4.	axios for API requests
 5.	loadash for handling state objects 
+6. 	bootstrap for css styling
 
 
 ### Run the example
