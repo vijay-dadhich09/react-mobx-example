@@ -4,7 +4,14 @@ mobx-react-example
 A minimal application that combines [MobX](https://mobxjs.github.io/mobx) with [React](https://facebook.github.io/react).
 Supports ES6 and JSX compilation through babel.
 
-* This application provides facility to add, delete and get posts.
+* Features of the app
+1. List of Posts
+2. Show A Post
+3. Add New Post
+4. Header
+5. Navigation on Header
+6. Footer
+7. Accessibility on home page
 
 Technology stack
 1.	React
