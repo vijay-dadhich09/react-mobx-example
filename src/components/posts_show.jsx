@@ -2,12 +2,15 @@ import React, { Component } from 'react';
 import { observer, inject } from 'mobx-react';
 import { Link } from 'react-router-dom';
 
-@observer(['posts'])
+@observer(['posts', 'headerStore'])
 class PostsShow extends Component {
 //
   componentDidMount () {
     const { id } = this.props.match.params;
     this.props.posts.fetchPostById(id);
+    this.props.headerStore.setPageTitle('Post');
+    const {path} = this.props.match;
+    this.props.headerStore.setSelectedMenu('home',path);
   }
   onDeleteClick() {
     const { id } = this.props.match.params;

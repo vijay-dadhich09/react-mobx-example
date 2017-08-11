@@ -3,13 +3,13 @@ var WebpackDevServer = require('webpack-dev-server');
 var config = require('./webpack.config');
 
 new WebpackDevServer(webpack(config), {
-  publicPath: config.output.publicPath,
-  hot: true,
-  historyApiFallback: true
-}).listen(80, 'localhost', function (err, result) {
-  if (err) {
-    console.log(err);
-  }
+    publicPath: config.output.publicPath,
+    hot: true,
+    historyApiFallback: true
+}).listen(4040, 'localhost', function(err, result) {
+    if (err) {
+        console.log(err);
+    }
 
-  console.log('Listening at localhost:80');
+    console.log('Listening at localhost:4040');
 });

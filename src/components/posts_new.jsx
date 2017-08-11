@@ -3,13 +3,19 @@ import { observer } from 'mobx-react';
 import { Link } from 'react-router-dom';
 import DevTools from 'mobx-react-devtools';
 
-@observer(['addPost'])
+@observer(['addPost', 'headerStore'])
 class AddPostForm extends Component {
 	constructor(props){
 		super(props);
 		this.updateProperty = this.updateProperty.bind(this);
 		this.onChange = this.onChange.bind(this);
 		this.onSubmit = this.onSubmit.bind(this);
+	}
+	componentDidMount(){
+		this.props.headerStore.setPageTitle('Add Post');
+		//console.log(this.props);
+		const {path} = this.props.match;
+   		 this.props.headerStore.setSelectedMenu('home',path);
 	}
 	updateProperty(key, value) {
 		this.props.addPost[key] = value;
@@ -29,7 +35,6 @@ class AddPostForm extends Component {
 		const myPost = this.props.addPost;
 		return (
 			<div>
-			<h1>Add Post Form</h1>
 			<form onSubmit={this.onSubmit.bind(this)}>
 			  <label>Title of the Post</label> <br/>
 			  <input type="text" name="title"  onChange={this.onChange} className="form-control"/><br/>

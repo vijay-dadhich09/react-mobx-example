@@ -20,7 +20,7 @@ Technology stack
 ```
 npm install
 npm start
-open http://localhost:80
+open http://localhost:4040
 ```
 
 @Author
