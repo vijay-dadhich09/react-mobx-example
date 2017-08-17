@@ -35,18 +35,18 @@ class AddPostForm extends Component {
 		const myPost = this.props.addPost;
 		return (
 			<div>
-			<form onSubmit={this.onSubmit.bind(this)}>
-			  <label>Title of the Post</label> <br/>
-			  <input type="text" name="title"  onChange={this.onChange} className="form-control"/><br/>
-			  <label>Categories</label>	<br/>
-			  <input type="text" name="categories"  onChange={this.onChange} className="form-control"/><br/>
-			  <label>Content</label> <br/>
-			  <input type="text" name="content"  onChange={this.onChange} className="form-control"/> <br />
+			<form role="form" onSubmit={this.onSubmit.bind(this)}>
+			  <label htmlFor="title">Title of the Post</label> <br/>
+			  <input type="text" id="title" name="title"  onChange={this.onChange} className="form-control"/><br/>
+			  <label htmlFor="categories">Categories</label>	<br/>
+			  <input type="text" id="categories" name="categories"  onChange={this.onChange} className="form-control"/><br/>
+			  <label htmlFor="content">Content</label> <br/>
+			  <input type="text" id="content" name="content"  onChange={this.onChange} className="form-control"/> <br />
 			  <button type="submit" className="btn btn-primary" >Submit</button>
 			  <Link to="/" className="btn btn-danger">Cancel</Link>
 			</form>
 			<DevTools />
-			</div>
+			</div>	
 		)
 	}
 }

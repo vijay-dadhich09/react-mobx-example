@@ -17,7 +17,7 @@ class PostsHeader extends Component {
               {this.props.headerStore.pageTitle}
             </h1>
             <nav role="navigation" id="nav">
-              <Link to="/posts" className={this.props.headerStore.menuHomeSelectedClass}>Home</Link>&nbsp;|&nbsp;
+              <Link to="/" className={this.props.headerStore.menuHomeSelectedClass} aria-label="goto home">Home</Link>&nbsp;|&nbsp;
               <Link to="/posts/new" className={this.props.headerStore.menuAddAPostSelectedClass}>Add a Post</Link>
             </nav>
           </header>
